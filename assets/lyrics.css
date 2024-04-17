@@ -1,40 +1,71 @@
 * {font-family: georgia;
-    text-align: center;}
-    body {
+text-align: center;}
+
+body {
         color:rgb(0, 0, 0);
         background-image: url("fog.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
-    }
-    .partone {
+        padding: 0;
+        /* margin: 0; */
+}
+
+/* .partone {
         color: darkolivegreen;
-    }
-    body {
+} */
+
+section {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+}
+
+body {
         border-style: groove;
         border-width: medium;
         border-color: darkolivegreen;
         border-radius: 5px;
-    }
-    /* .lyrics {
-        
-    } */
-    pre {
+}
+
+pre {
         font-size: small;
-    }
-    .player {
+}
+
+.player {
         aspect-ratio: 16/9;
         border-radius: 50px;
         height:40%;
         width:40%;
-    }
-    .youtube {
+}
+
+.youtube {
         color: darkolivegreen;
         font-size: larger; 
-    }
-    .email {
+}
+
+.email {
         color: blue;
         font-size: larger;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
     }
-    
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    }
