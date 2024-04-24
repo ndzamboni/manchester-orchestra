@@ -69,3 +69,57 @@ pre {
     filter: blur(0);
     transform: translateX(0);
     }
+
+@media screen and (max-width: 768px) {
+        body {
+                background-size: cover;
+        }
+
+        .player {
+                height: 30%;
+                width: 60%;
+        }
+
+        .lyrics {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+
+        pre {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+                        }
+}
+
+@media screen and (max-width: 480px) {
+        body {
+                background-size: cover;
+        }
+
+        .player {
+                height: 20%;
+                width: 80%;
+        }
+
+        .lyrics {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+
+        pre {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+}
