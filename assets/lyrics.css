@@ -1,125 +1,86 @@
-* {font-family: georgia;
-text-align: center;}
-
-body {
-        color:rgb(0, 0, 0);
+* {
+        font-family: georgia;
+        text-align: center;
+    }
+    
+    body {
+        color: rgb(0, 0, 0);
         background-image: url("fog.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
         padding: 0;
-        /* margin: 0; */
-}
-
-/* .partone {
-        color: darkolivegreen;
-} */
-
-section {
-        display: grid;
-        place-items: center;
-        align-content: center;
-        min-height: 100vh;
-}
-
-body {
+        margin: 0;
         border-style: groove;
         border-width: medium;
         border-color: darkolivegreen;
         border-radius: 5px;
-}
-
-pre {
+    }
+    
+    section {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+    }
+    
+    .pre-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    pre {
         font-size: small;
-}
-
-.player {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    .player {
         aspect-ratio: 16/9;
         border-radius: 50px;
-        height:40%;
-        width:40%;
-}
-
-.youtube {
-        color: darkolivegreen;
-        font-size: larger; 
-}
-
-.email {
-        color: blue;
+        height: 40%;
+        width: 40%;
+    }
+    
+    .youtube, .email {
         font-size: larger;
-}
-
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-@media(prefers-reduced-motion) {
+        color: darkolivegreen;
+    }
+    
     .hidden {
-        transition: none;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s;
     }
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    
+    @media (prefers-reduced-motion) {
+        .hidden {
+            transition: none;
+        }
     }
-
-@media screen and (max-width: 768px) {
-        body {
-                background-size: cover;
-        }
-
+    
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+    
+    @media screen and (max-width: 768px) {
         .player {
-                height: 30%;
-                width: 60%;
+            height: 30%;
+            width: 60%;
         }
-
-        .lyrics {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                }
-
-        pre {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-                        }
-}
-
-@media screen and (max-width: 480px) {
-        body {
-                background-size: cover;
-        }
-
+    }
+    
+    @media screen and (max-width: 480px) {
         .player {
-                height: 20%;
-                width: 80%;
+            height: 20%;
+            width: 80%;
         }
-
-        .lyrics {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        }
-
-        pre {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        }
-}
+    }
+    
